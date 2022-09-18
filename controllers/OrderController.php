@@ -62,6 +62,9 @@ Class OrderController extends Controller{
                         if ($food->quantity - $ghazaCount > 0) {
                             $foodDropDown = $foods;
                         }
+                        else {
+                            $foodDropDown = [];
+                        }
                     }                
                 }
             return ['output'=>$foodDropDown, 'selected'=>''];
